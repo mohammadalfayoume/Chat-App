@@ -1,0 +1,36 @@
+<!-- waiting-room.component.html -->
+<form [formGroup]="firstForm" (ngSubmit)="$event.preventDefault(); onSendAllSubmit()">
+    <div class="row px-5 py-5">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Username" formControlName="username" required>
+          <input type="text" class="form-control" placeholder="Message" formControlName="message" required>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <hr>
+        <button type="submit" class="btn btn-success">Send Message To All</button>
+      </div>
+    </div>
+  </form>
+  
+  <hr>
+  
+  <form [formGroup]="secondForm" (ngSubmit)="$event.preventDefault(); onSendSubmit()">
+    <div class="row px-5 py-5">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Username" formControlName="username" required>
+          <input type="text" class="form-control" placeholder="Message" formControlName="message" required>
+          <input type="text" class="form-control" placeholder="ReceiverId" formControlName="receiverId" required>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <hr>
+        <button type="submit" class="btn btn-success">Send Message</button>
+      </div>
+    </div>
+  </form>
+  
+  <hr>
+  

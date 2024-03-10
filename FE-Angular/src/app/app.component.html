@@ -1,0 +1,22 @@
+<!-- app.component.html -->
+<div>
+  <main>
+    <div class="row">
+      <div class="col-3">Connection Id</div>
+      <div class="col-"><span id="connectionId">{{ connectionId }}</span></div>
+    </div>
+    <div class="container">
+      <div class="row px-5 my-5">
+        <div class="col-sm-12">
+          <h1 class="font-weight-light">Welcome to the F1 ChatApp</h1>
+        </div>
+      </div>
+      <app-chat-room (sendMessage)="sendMessage($event)" (sendToUser)="sendToUser($event)"></app-chat-room>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <ul id="messagesList"></ul>
+      </div>
+    </div>
+  </main>
+</div>
